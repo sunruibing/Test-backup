@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <!--第三方js-->
+	<script src="assets/js/doctor/jquery-3.1.0.min.js"></script>
+	<script src="https://cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
+	<script src='assets/js/doctor/jmessage-sdk-web.min.js'></script>
+	<script src="assets/js/doctor/jquery.cookies.2.2.0.js"></script>
+	
+	<!--自定义css-->
+	<link rel="stylesheet"  rel="stylesheet" href="assets/css/doctor/core.css" />
+	<link rel="stylesheet" href="assets/css/doctor/talk.css" />
+	<link rel="stylesheet" href="assets/css/doctor/center.css" />
+	<link rel="stylesheet" href="assets/css/doctor/doctor.css" />
+	<link rel="stylesheet" href="assets/css/doctor/pintuer.css" />
+	
+	<!--自定义js-->
+	<script type="text/javascript" src="assets/js/doctor/index.js"></script>
+	<script type="text/javascript" src="assets/js/doctor/core.js" ></script>
+	<script type="text/javascript" src="assets/js/doctor/showdate.js"></script>
+</head>
+<body>
+  <div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加用药提醒</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">   
+      <input type="hidden" name="id"  value="" />  
+      <div class="form-group">
+        <div class="label">
+          <label>开始时间：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="startDay" id="startDay"placeholder="2016-11-22" onClick="return Calendar('startDay');" class="text_time" />         
+          <div class="tips"></div>
+        </div>
+      </div> 
+       <div class="form-group">
+        <div class="label">
+          <label>结束时间：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="entitle" value="" />         
+          <div class="tips"></div>
+        </div>
+      </div>       
+      <div class="form-group">
+        <div class="label">
+          <label>用药时间：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="s_title" value="" />         
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>用药内容：</label>
+        </div>
+        <div class="field">
+          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+        </div>
+     </div>
+     <div class="form-group">
+        <div class="label">
+          <label>用药时间：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="s_keywords" value=""/>         
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>用药内容：</label>
+        </div>
+        <div class="field">
+          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+        </div>
+     </div>
+     <div class="form-group">
+        <div class="label">
+          <label>用药时间：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="s_keywords" value=""/>         
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>用药内容：</label>
+        </div>
+        <div class="field">
+          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+        </div>
+     </div>
+     <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+   <script type="text/javascript" src="assets/js/doctor/time.js"></script>
+   <script type="text/javascript" src="assets/js/doctor/data.js"></script>
+<script>
+function del(id){
+	if(confirm("您确定要删除吗?")){
+		
+	}
+}
+</script>
+</body>
+</html>
