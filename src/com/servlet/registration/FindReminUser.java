@@ -42,7 +42,6 @@ public class FindReminUser extends HttpServlet {
 
 			response.getWriter().print(userinfo);
 
-			System.out.println(userinfo);
 
 		} catch (SQLException e) {
 			e.printStackTrace();

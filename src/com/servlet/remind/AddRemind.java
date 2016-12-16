@@ -60,7 +60,7 @@ public class AddRemind extends HttpServlet {
 		String content1 = request.getParameter("content1");
 		String content2 = request.getParameter("content2");
 		String content3 = request.getParameter("content3");
-		Integer userId = Integer.parseInt(request.getParameter("userId"));
+		Integer userId = Integer.parseInt(request.getParameter("id"));
 		String timestamp = String.valueOf(new Date().getTime());//时间戳
 		
 		

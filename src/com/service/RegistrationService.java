@@ -338,7 +338,7 @@ public class RegistrationService {
 	//医生端获取用户挂号列表
 	public List<Map<String, Object>> quireUser() throws SQLException {
 
-		String sql = "SELECT id,name,gender,phone,order_code,reservation_date FROM registration";
+		String sql = "SELECT id,name,gender,phone,order_code,reservation_date, user_id FROM registration";
 		DBUtil dbUtil = new DBUtil(sql);
 
 		ResultSet result = null;
@@ -354,6 +354,7 @@ public class RegistrationService {
 				String phone = result.getString("phone");
 				String order_code = result.getString("order_code");
 				String reservation_date = result.getString("reservation_date");
+				Integer userId = result.getInt("user_id");
 
 				Map<String, Object> map = new HashMap<String, Object>();
 				map.put("id", id);
@@ -362,6 +363,7 @@ public class RegistrationService {
 				map.put("phone", phone);
 				map.put("order_code", order_code);
 				map.put("reservation_date", reservation_date);
+				map.put("userId", userId);
 
 				list.add(map);
 			}

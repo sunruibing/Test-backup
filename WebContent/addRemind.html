@@ -6,7 +6,6 @@
 	<script src="assets/js/doctor/jquery-3.1.0.min.js"></script>
 	<script src="https://cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
 	<script src='assets/js/doctor/jmessage-sdk-web.min.js'></script>
-	<script src="assets/js/doctor/jquery.cookies.2.2.0.js"></script>
 	
 	<!--自定义css-->
 	<link rel="stylesheet"  rel="stylesheet" href="assets/css/doctor/core.css" />
@@ -16,11 +15,16 @@
 	<link rel="stylesheet" href="assets/css/doctor/pintuer.css" />
 	
 	<!--自定义js-->
+   	<script type="text/javascript" src="assets/js/doctor/data.js"></script>
 	<script type="text/javascript" src="assets/js/doctor/index.js"></script>
 	<script type="text/javascript" src="assets/js/doctor/core.js" ></script>
 	<script type="text/javascript" src="assets/js/doctor/showdate.js"></script>
 	<script>
-	   
+	$(function(){
+	$('#time1').timepick();
+	$('#time2').timepick();
+	$('#time3').timepick();
+	});
 	</script>
 </head>
 <body>
@@ -52,7 +56,7 @@
           <label>用药时间：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
+          <input type="text" class="input" id="time1" name="time1" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
@@ -68,7 +72,7 @@
           <label>用药时间：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
+          <input type="text" class="input" id="time2" name="time2" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
@@ -84,7 +88,7 @@
           <label>用药时间：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
+          <input type="text" class="input" id="time3" name="time3" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
@@ -100,23 +104,23 @@
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" id="saveRemind"> 提交</button>
+          <button class="button bg-main icon-check-square-o" id="saveRemid"> 提交</button>
         </div>
       </div>
     </form>
   </div>
 </div>
 </body>
-   <script type="text/javascript" src="assets/js/doctor/time.js"></script>
-   <script type="text/javascript" src="assets/js/doctor/data.js"></script>
 <script>
 $(document).ready(function(){
+	
+	
    $("#saveRemid").click(function(){
 	   
-	   alert("kdjhfkhd");
-		/* var userid = $.cookie("userId");
-
-	    
+	   var userId = $.cookie("userId");
+	   
+	   alert(userId);
+	   
 	   var startDay = document.remind.startDay.value;
 	   
 	   var endDay = document.remind.endDay.value;
@@ -133,12 +137,12 @@ $(document).ready(function(){
 	   
 	   var content3 = document.remind.content3.value;
 	   
-	   if(id){
+	   if(userId){
 		 $.ajax({
-			 url:'http://localhost:8080/Test/AddRemind,
+			 url:'http://localhost:8080/Test/AddRemind',
 		     type:'POST',
 		     dataType:'JSON',
-			 data: $(".form-x").serializeArray(),
+			 data:{"userId":userId},
 			 success:function(data){
 			 	 if(data=="0"){
 			 		 alert("成功");
@@ -149,7 +153,6 @@ $(document).ready(function(){
 		} 
    });
 });
-
 </script>
 </body>
 <script src="assets/js/jquery.cookie.js"></script>

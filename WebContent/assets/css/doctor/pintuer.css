@@ -4221,13 +4221,16 @@ th {
 	font-size: 14px;
 	padding: 10px;
 	border: solid 1px #ddd;
-	width: 100%;
+	width: 70%;
 	line-height: 20px;
 	display: block;
 	border-radius: 3px;
 	-webkit-appearance: none;
 }
-
+.w50 {
+    width: 25%;
+    float: left;
+}
 .label {
 	padding-bottom: 7px;
 	display: block;

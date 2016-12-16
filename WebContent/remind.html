@@ -1,11 +1,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!--第三方js-->
-	<script src="assets/js/doctor/jquery-3.1.0.min.js"></script>
+	<script src="assets/js/jquery/jquery-3.1.0.min.js"></script>
 	<script src="https://cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
 	<script src='assets/js/doctor/jmessage-sdk-web.min.js'></script>
 	<script src="assets/js/doctor/jquery.cookies.2.2.0.js"></script>
 	<script src="assets/js/jquery.cookie.js"></script>
-	
 	
 	<!--自定义css-->
 	<link rel="stylesheet"  rel="stylesheet" href="assets/css/doctor/core.css" />
@@ -50,29 +49,29 @@ $(document).ready(function(){
         success:function(data){
    	  	$.each(data, function(commentIndex, comment){
    		  $("#remindTbody").html($("#remindTbody").html()+ "<tr id='theader'>"+
-   		  			"<td>"+comment['id']+"</td>"+
-   		  			"<td >"+comment['name']+"</td>"+
-   		  			"<td >"+comment['gender']+"</td>"+
-   		  			"<td >"+comment['phone']+"</td>"+
-   		  			"<td >"+comment['order_code']+"</td>"+
-   		  			"<td >"+comment['reservation_date']+"</td>"+
-   		  			"<td>" + '<div class="button-group">' +
-					'<a class="button border-main edit" val=' + comment['id'] + ' href="#"><span class="icon-edit"></span>用药提醒</a>' +
-					'</div>' +
-   					"</td>"+
-   					"</tr>");
-     		
+  			"<td>"+comment['id']+"</td>"+
+  			"<td >"+comment['name']+"</td>"+
+  			"<td >"+comment['gender']+"</td>"+
+  			"<td >"+comment['phone']+"</td>"+
+  			"<td >"+comment['order_code']+"</td>"+
+  			"<td >"+comment['reservation_date']+"</td>"+
+  			"<td>" + '<div class="button-group">' +
+			'<a class="button border-main edit" val=' + comment['userId'] + ' href="#"><span class="icon-edit"></span>用药提醒</a>' +
+			'</div>' +
+			"</td>"+
+			"</tr>");
 				});
    	  		$("#remindTbody").find(".edit").on("click", function() {
-			var id = $(this).attr("val");
-			alert(id);
-		    $.cookie("userId",id);
+			var userId = $(this).attr("val");
+		    $.cookie("userId",userId);
+		    alert(userId);
 			window.location.href = "addRemind.html";
 			});
         },
 });
 });
 </script>
+ <script type="text/javascript" src="assets/js/doctor/data.js"></script>
 </body>
 </html>
 

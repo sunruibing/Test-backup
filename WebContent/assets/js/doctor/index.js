@@ -18,49 +18,49 @@ $(document).ready(function(){
         type: 'post',  
         dataType: 'json',
         success:function(data){
-        	  $.each(data, function(commentIndex, comment){
-        		  $("#registarationTbody").html($("#registarationTbody").html()+ "<tr id='theader'>"+
-        				  "<td>"+comment['id']+"</td>"+
-        				  "<td >"+comment['name']+"</td>"+
-        				  "<td >"+comment['gender']+"</td>"+
-        				  "<td >"+comment['phone']+"</td>"+
-        				  "<td >"+comment['order_code']+"</td>"+
-        				  "<td >"+comment['reservation_date']+"</td>"+
-        				  "<td >"+ '<span val=' + comment['id'] + ' id="del"><img src="assets/images/doctor/03.png"/></span>'+"</td>"+
-        		  "</tr>");
-        	  });
+    	  $.each(data, function(commentIndex, comment){
+    		  $("#registarationTbody").html($("#registarationTbody").html()+ "<tr id='theader'>"+
+    				  "<td>"+comment['id']+"</td>"+
+    				  "<td >"+comment['name']+"</td>"+
+    				  "<td >"+comment['gender']+"</td>"+
+    				  "<td >"+comment['phone']+"</td>"+
+    				  "<td >"+comment['order_code']+"</td>"+
+    				  "<td >"+comment['reservation_date']+"</td>"+
+    				  "<td >"+ '<span val=' + comment['id'] + ' id="del"><img src="assets/images/doctor/03.png"/></span>'+"</td>"+
+    		  "</tr>");
+    	  });
         	  
         },
 	});
 	/*添加挂号用户*/
 	$(".guahaotijiao").click(function(){
 		$.ajax({
-			url:'http://localhost:8080/Test-backup/AddRegUser',
-			type:'post',
-			dataType:'json',
-			data: $("#huanzhe").serializeArray(), 
-			success:function(data){
-				 var name = document.form3_1.name.value;
-				 var gender = document.form3_1.gender.value;
-	           	 var phone = document.form3_1.phone.value;
-	           	 var order_code = document.form3_1.order_code.value;
-	           	 var reservation_date = document.form3_1.reservation_date.value;
-	           	 if(name==""){
-	           		 alert("请输入");
-	           	 }else if(gender ==""){
-	           		 alert("请输入性别");
-	           	 }else if(phone==""){
-	           		 alert("请输入");
-	           	 }else if(order_code==""){
-	           		 alert("不能为空");
-	           	 }else if(reservation_date==""){
-	           		 alert("不能为空");
-	           	 }else{
-	           		 alert("添加成功");
-	           	 }
-			}
-		});
-		return false;
+		url:'http://localhost:8080/Test-backup/AddRegUser',
+		type:'post',
+		dataType:'json',
+		data: $("#huanzhe").serializeArray(), 
+		success:function(data){
+			 var name = document.form3_1.name.value;
+			 var gender = document.form3_1.gender.value;
+           	 var phone = document.form3_1.phone.value;
+           	 var order_code = document.form3_1.order_code.value;
+           	 var reservation_date = document.form3_1.reservation_date.value;
+           	 if(name==""){
+           		 alert("请输入");
+           	 }else if(gender ==""){
+           		 alert("请输入性别");
+           	 }else if(phone==""){
+           		 alert("请输入");
+           	 }else if(order_code==""){
+           		 alert("不能为空");
+           	 }else if(reservation_date==""){
+           		 alert("不能为空");
+           	 }else{
+           		 alert("添加成功");
+           	 }
+		}
+	});
+	return false;
 		
 		
 	});
@@ -94,18 +94,9 @@ $(document).ready(function(){
 	}
 	$("#nowChat").val(from_id);
 	});		
-    
-   /*患者管理列表*/
-   	$(".subMenu li").click(function() {
-	$("#content b").html($(this).html());
-	});
    /*关闭对话框*/	
     $('.close').click(function(){
     $('.chat').css('display','none')
-    });
-   /*挂号医生提醒用户*/
-    $("#registarationTbody,img").click(function(){
-      $(".reply").show();
     });
    /*用药提醒设置*/
     $(".add input").click(function(){
@@ -185,11 +176,6 @@ $(document).ready(function(){
 			$("#registarationTbody tr:not('#theader')").css("background", "#fff").show();
 		}
 	});
-    $('.time1').timepick();
-	$('.time2').timepick();
-	$('.time3').timepick();
-	
-	
 });
 /*患者管理列表打开*/
 	function setTab(name, cursel, n) {
