@@ -43,7 +43,7 @@ $(document).ready(function() {
 	var w = 200; //将图片宽度+200 
 	var h = 200; // 将图片高度 +200 
 	$.ajax({ /* 139.224.196.16 */
-			url: 'http://localhost:8080/Test/FindLectureAll',
+			url: 'http://localhost:8080/Test-backup/FindLectureAll',
 			type: 'post',
 			dataType: 'json',  
 			success: function(data) {
@@ -164,7 +164,7 @@ $(document).ready(function() {
 	//删除视频
 	function del(id) {
 		$.ajax({
-			url: 'http://localhost:8080/Test/DeleteLectureById',
+			url: 'http://localhost:8080/Test-backup/DeleteLectureById',
 			type: 'post',
 			dataType: 'json',
 			data: {'id': id},

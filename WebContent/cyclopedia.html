@@ -14,7 +14,7 @@
 		<script>
 			$(document).ready(function() {
 				$.ajax({ /* 139.224.196.16 */
-						url: 'http://localhost:8080/Test/FindCylopedia',
+						url: 'http://localhost:8080/Test-backup/FindCylopedia',
 						type: 'post',
 						dataType: 'json',
 						success: function(data) {
@@ -129,7 +129,7 @@
 			//删除文章
 			function del(id) {
 				$.ajax({
-					url: 'http://localhost:8080/Test/DeleteCyclopediaById',
+					url: 'http://localhost:8080/Test-backup/DeleteCyclopediaById',
 					type: 'post',
 					dataType: 'json',
 					data: {'id': id},

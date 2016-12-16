@@ -79,7 +79,6 @@ body {
 	font-size: 14px;
 	color: #333;
 	background: #fff;
-	font-family: "Microsoft YaHei", "simsun", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -4236,10 +4235,6 @@ th {
 	color: #202020;
 }
 
-.label label {
-	font-weight: bold;
-}
-
 .input-file {
 	display: inline-block;
 	position: relative;
@@ -4282,7 +4277,7 @@ select[readonly] {
 }
 
 
-/*IE6无效*/
+/*IE6鏃犳晥*/
 
 textarea.input {
 	height: auto;
@@ -6514,7 +6509,7 @@ dd {
 }
 
 
-/*条纹-IE9以下无效果*/
+/*鏉＄汗-IE9浠ヤ笅鏃犳晥鏋�*/
 
 .table-bordered th,
 .table-bordered td {
@@ -6531,7 +6526,7 @@ dd {
 }
 
 
-/*不支持IE6*/
+/*涓嶆敮鎸両E6*/
 
 .table-condensed th,
 .table-condensed td {
@@ -8810,7 +8805,7 @@ a.text-white:hover,
 }
 
 
-/*--------自定义链接颜色(可选)--------*/
+/*--------鑷畾涔夐摼鎺ラ鑹�(鍙��)--------*/
 
 a {
 	color: #333;
@@ -8818,7 +8813,7 @@ a {
 }
 
 
-/*链接-颜色*/
+/*閾炬帴-棰滆壊*/
 
 a:focus,
 a:hover {
@@ -8826,10 +8821,10 @@ a:hover {
 }
 
 
-/*链接-悬浮颜色*/
+/*閾炬帴-鎮诞棰滆壊*/
 
 
-/*--------自定义文本颜色--------*/
+/*--------鑷畾涔夋枃鏈鑹�--------*/
 
 .text-main,
 a.text-main:link,
@@ -8850,7 +8845,7 @@ blockquote.border-main strong,
 }
 
 
-/*文本-主色*/
+/*鏂囨湰-涓昏壊*/
 
 .text-sub,
 a.text-sub:link,
@@ -8864,7 +8859,7 @@ blockquote.border-sub strong,
 }
 
 
-/*文本-辅色*/
+/*鏂囨湰-杈呰壊*/
 
 .text-back,
 a.text-back:link,
@@ -8878,7 +8873,7 @@ blockquote.border-back,
 }
 
 
-/*文本-背景色*/
+/*鏂囨湰-鑳屾櫙鑹�*/
 
 .text-mix,
 a.text-mix:link,
@@ -8892,7 +8887,7 @@ blockquote.border-mix,
 }
 
 
-/*文本-融合色*/
+/*鏂囨湰-铻嶅悎鑹�*/
 
 .text-dot,
 a.text-dot:link,
@@ -8906,10 +8901,10 @@ blockquote.border-dot strong,
 }
 
 
-/*文本-点缀色*/
+/*鏂囨湰-鐐圭紑鑹�*/
 
 
-/*--------自定义背景色--------*/
+/*--------鑷畾涔夎儗鏅壊--------*/
 
 .bg-main,
 .border-main .button.active,
@@ -8921,7 +8916,7 @@ blockquote.border-dot strong,
 }
 
 
-/*背景-主色*/
+/*鑳屾櫙-涓昏壊*/
 
 .bg-sub,
 .border-sub .button.active,
@@ -8933,7 +8928,7 @@ blockquote.border-dot strong,
 }
 
 
-/*背景-辅色*/
+/*鑳屾櫙-杈呰壊*/
 
 .bg-back,
 .border-back .button.active,
@@ -8945,7 +8940,7 @@ blockquote.border-dot strong,
 }
 
 
-/*背景-背景色*/
+/*鑳屾櫙-鑳屾櫙鑹�*/
 
 .bg-mix,
 .border-mix .button.active,
@@ -8956,7 +8951,7 @@ blockquote.border-dot strong,
 }
 
 
-/*背景-融合色*/
+/*鑳屾櫙-铻嶅悎鑹�*/
 
 .bg-dot,
 .border-dot .button.active,
@@ -8968,10 +8963,10 @@ blockquote.border-dot strong,
 }
 
 
-/*背景-点缀色*/
+/*鑳屾櫙-鐐圭紑鑹�*/
 
 
-/*--------自定义边框色--------*/
+/*--------鑷畾涔夎竟妗嗚壊--------*/
 
 .border-main,
 .border-main .button,
@@ -8990,7 +8985,7 @@ blockquote.border-dot strong,
 }
 
 
-/*边框-主色*/
+/*杈规-涓昏壊*/
 
 .border-sub,
 .border-sub .button,
@@ -9009,7 +9004,7 @@ blockquote.border-dot strong,
 }
 
 
-/*边框-辅色*/
+/*杈规-杈呰壊*/
 
 .border-back,
 .border-back .button,
@@ -9028,7 +9023,7 @@ blockquote.border-dot strong,
 }
 
 
-/*边框-背景色*/
+/*杈规-鑳屾櫙鑹�*/
 
 .border-mix,
 .border-mix .button,
@@ -9047,7 +9042,7 @@ blockquote.border-dot strong,
 }
 
 
-/*边框-融合色*/
+/*杈规-铻嶅悎鑹�*/
 
 .border-dot,
 .border-dot .button,
@@ -9066,10 +9061,10 @@ blockquote.border-dot strong,
 }
 
 
-/*边框-点缀色*/
+/*杈规-鐐圭紑鑹�*/
 
 
-/*--------自定义按钮悬浮文本、边框及背景色--------*/
+/*--------鑷畾涔夋寜閽偓娴枃鏈�佽竟妗嗗強鑳屾櫙鑹�--------*/
 
 .button.border-main:hover,
 .button.border-main:focus,
@@ -9081,7 +9076,7 @@ blockquote.border-dot strong,
 }
 
 
-/*主色-文本-边框-背景*/
+/*涓昏壊-鏂囨湰-杈规-鑳屾櫙*/
 
 .button.border-sub:hover,
 .button.border-sub:focus,
@@ -9093,7 +9088,7 @@ blockquote.border-dot strong,
 }
 
 
-/*配色-文本-边框-背景*/
+/*閰嶈壊-鏂囨湰-杈规-鑳屾櫙*/
 
 .button.border-back:hover,
 .button.border-back:focus,
@@ -9105,7 +9100,7 @@ blockquote.border-dot strong,
 }
 
 
-/*背景色-文本-边框-背景*/
+/*鑳屾櫙鑹�-鏂囨湰-杈规-鑳屾櫙*/
 
 .button.border-mix:hover,
 .button.border-mix:focus,
@@ -9117,7 +9112,7 @@ blockquote.border-dot strong,
 }
 
 
-/*融合-文本色-边框-背景*/
+/*铻嶅悎-鏂囨湰鑹�-杈规-鑳屾櫙*/
 
 .button.border-dot:hover,
 .button.border-dot:focus,
@@ -9129,4 +9124,4 @@ blockquote.border-dot strong,
 }
 
 
-/*点缀色-文本-边框-背景*/
+/*鐐圭紑鑹�-鏂囨湰-杈规-鑳屾櫙*/

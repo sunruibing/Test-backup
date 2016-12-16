@@ -79,7 +79,7 @@ function getToken(){
 	var token = "";
 	$.ajax({
 		async:false,
-		url: 'http://localhost:8080/Test/getCyclopediaToken',
+		url: 'http://localhost:8080/Test-backup/getCyclopediaToken',
 		type: 'post',
 		dataType: 'text',
 		success: function(result){
@@ -231,7 +231,7 @@ $("#addCyclopedia").click(function(){
 	
 	
 	$.ajax({/*139.224.196.16  */
-		url:"http://localhost:8080/Test/AddCyclopedia", 
+		url:"http://localhost:8080/Test-backup/AddCyclopedia", 
 		type: 'post', 
 		dataType:'json',
 		data: $(".form-x").serializeArray(),

@@ -79,7 +79,7 @@ $(document).ready(function(){
 	var id = $.cookie("cyclopediaUp");
 	if(id){
 		$.ajax({
-			url:'http://localhost:8080/Test/FindCyclopediaId?id='+id,
+			url:'http://localhost:8080/Test-backup/FindCyclopediaId?id='+id,
 			type:'POST',
 			dataType:'JSON',
 			success:function(d){
@@ -96,7 +96,7 @@ function getToken(){
 	var token = "";
 	$.ajax({
 		async:false,
-		url: 'http://localhost:8080/Test/getCyclopediaToken',
+		url: 'http://localhost:8080/Test-backup/getCyclopediaToken',
 		type: 'post',
 		dataType: 'text',
 		success: function(result){
@@ -240,7 +240,7 @@ $("#updateCyclopedia").click(function(){
 		var id = $.cookie("cyclopediaUp");
 		if(id){
 			$.ajax({
-				url:'http://localhost:8080/Test/UpdateCyclopedia?id='+id,
+				url:'http://localhost:8080/Test-backup/Test/UpdateCyclopedia?id='+id,
 				type:'POST',
 				dataType:'JSON',
 				data: $(".form-x").serializeArray(),

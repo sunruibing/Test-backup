@@ -71,7 +71,7 @@ function getToken(){
 	var token = "";
 	$.ajax({
 		async:false,
-		url: 'http://localhost:8080/Test/getCyclopediaToken',
+		url: 'http://localhost:8080/Test-backup/getCyclopediaToken',
 		type: 'post',
 		dataType: 'text',
 		success: function(result){
@@ -220,7 +220,7 @@ var uploader2 = Q2.uploader({
 		var icon = document.from3.icon.value;
 		
 		$.ajax({
-			url:"http://localhost:8080/Test/AddLecture", 
+			url:"http://localhost:8080/Test-backup/AddLecture", 
 			type: 'post', 
 			dataType:'json',
 			data: $(".form-x").serializeArray(),

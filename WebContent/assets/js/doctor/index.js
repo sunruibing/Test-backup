@@ -3,37 +3,22 @@ $(document).ready(function(){
 	logged();
 	/* 获取医生信息*/
 	$.ajax({
-		url: 'http://localhost:8080/Test/user',  
+		url: 'http://localhost:8080/Test-backup/user',  
         type: 'post',  
         dataType: 'json',
         success:function(data){
         	  $.each(data, function(commentIndex, comment){
-                  
-        		 // console.log("姓名:"+ comment['name'],comment['icon'],comment['section']);
-        		  
         		  $(".information").html($(".information").html() +  "<img src=" + comment['icon'] +" />" + "<div class='section'>"+"<span>"+comment['name'] + "</span>"+"<li>" +comment['section'] + "</li>"+"</div>");
         	  });
         }
 	});
 	//获取挂号列表
 	$.ajax({
-		url: 'http://localhost:8080/Test/FindReminUser',  
+		url: 'http://localhost:8080/Test-backup/FindReminUser',  
         type: 'post',  
         dataType: 'json',
         success:function(data){
         	  $.each(data, function(commentIndex, comment){
-        		  $("#remindTbody").html($("#remindTbody").html()+ "<tr id='theader'>"+
-        		  			"<td>"+comment['id']+"</td>"+
-        		  			"<td >"+comment['name']+"</td>"+
-        		  			"<td >"+comment['gender']+"</td>"+
-        		  			"<td >"+comment['phone']+"</td>"+
-        		  			"<td >"+comment['order_code']+"</td>"+
-        		  			"<td >"+comment['reservation_date']+"</td>"+
-        		  			"<td>" + '<div class="button-group">' +
-    						'<a class="button border-main edit" val=' + comment['id'] + ' href="#"><span class="icon-edit"></span> 修改</a>' +
-    						'</div>' +
-        					"</td>"+
-        					"</tr>");
         		  $("#registarationTbody").html($("#registarationTbody").html()+ "<tr id='theader'>"+
         				  "<td>"+comment['id']+"</td>"+
         				  "<td >"+comment['name']+"</td>"+
@@ -44,12 +29,13 @@ $(document).ready(function(){
         				  "<td >"+ '<span val=' + comment['id'] + ' id="del"><img src="assets/images/doctor/03.png"/></span>'+"</td>"+
         		  "</tr>");
         	  });
-        }
+        	  
+        },
 	});
 	/*添加挂号用户*/
 	$(".guahaotijiao").click(function(){
 		$.ajax({
-			url:'http://localhost:8080/Test/AddRegUser',
+			url:'http://localhost:8080/Test-backup/AddRegUser',
 			type:'post',
 			dataType:'json',
 			data: $("#huanzhe").serializeArray(), 

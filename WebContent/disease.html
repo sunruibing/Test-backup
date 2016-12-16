@@ -51,7 +51,7 @@
 //获取疾病列表
 $(document).ready(function() {
 	$.ajax({ /* 139.224.196.16 */
-			url: 'http://localhost:8080/Test/FindDesease',
+			url: 'http://localhost:8080/Test-backup/FindDesease',
 			type: 'post',
 			dataType: 'json',
 			success: function(data) {
@@ -179,7 +179,7 @@ $(document).ready(function() {
 	//删除文章
 	function del(id) {
 		$.ajax({
-			url: 'http://localhost:8080/Test/DeleteDeseaseById',
+			url: 'http://localhost:8080/Test-backup/DeleteDeseaseById',
 			type: 'post',
 			dataType: 'json',
 			data: {'id': id},

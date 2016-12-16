@@ -12,7 +12,7 @@
 	<script src="assets/js/pintuer.js"></script>
 <script>
 $.ajax({
-	url:"http://localhost:8080/Test/FindSectionList",
+	url:"http://localhost:8080/Test-backup/FindSectionList",
     type:"post",
     dataType:"json",
     success:function(data){
@@ -28,7 +28,7 @@ $.ajax({
 });
 //获取推荐医生
 $.ajax({
-	 url:"http://localhost:8080/Test/FindDoctorList",
+	 url:"http://localhost:8080/Test-backup/FindDoctorList",
      type:"post",
      dataType:"json",
      success:function(data){
@@ -191,7 +191,7 @@ function getToken(){
 	var token = "";
 	$.ajax({
 		async:false,
-		url: 'http://localhost:8080/Test/getCyclopediaToken',
+		url: 'http://localhost:8080/Test-backup/getCyclopediaToken',
 		type: 'post',
 		dataType: 'text',
 		success: function(result){
@@ -359,7 +359,7 @@ var uploader2 = Q2.uploader({
 		    
 	
 		$.ajax({/*139.224.196.16  */
-			url:"http://localhost:8080/Test/AddDisease", 
+			url:"http://localhost:8080/Test-backup/AddDisease", 
 			type: 'post', 
 			dataType:'json',
 			data: $(".form-x").serializeArray(),

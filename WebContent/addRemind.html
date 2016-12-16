@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <!--µÚÈı·½js-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--ç¬¬ä¸‰æ–¹js-->
 	<script src="assets/js/doctor/jquery-3.1.0.min.js"></script>
 	<script src="https://cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
 	<script src='assets/js/doctor/jmessage-sdk-web.min.js'></script>
 	<script src="assets/js/doctor/jquery.cookies.2.2.0.js"></script>
 	
-	<!--×Ô¶¨Òåcss-->
+	<!--è‡ªå®šä¹‰css-->
 	<link rel="stylesheet"  rel="stylesheet" href="assets/css/doctor/core.css" />
 	<link rel="stylesheet" href="assets/css/doctor/talk.css" />
 	<link rel="stylesheet" href="assets/css/doctor/center.css" />
 	<link rel="stylesheet" href="assets/css/doctor/doctor.css" />
 	<link rel="stylesheet" href="assets/css/doctor/pintuer.css" />
 	
-	<!--×Ô¶¨Òåjs-->
+	<!--è‡ªå®šä¹‰js-->
 	<script type="text/javascript" src="assets/js/doctor/index.js"></script>
 	<script type="text/javascript" src="assets/js/doctor/core.js" ></script>
 	<script type="text/javascript" src="assets/js/doctor/showdate.js"></script>
+	<script>
+	   
+	</script>
 </head>
 <body>
   <div class="panel admin-panel margin-top">
-  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>Ìí¼ÓÓÃÒ©ÌáĞÑ</strong></div>
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>æ·»åŠ ç”¨è¯æé†’</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="">   
+    <form method="post" class="form-x" name="remind">   
       <input type="hidden" name="id"  value="" />  
       <div class="form-group">
         <div class="label">
-          <label>¿ªÊ¼Ê±¼ä£º</label>
+          <label>å¼€å§‹æ—¶é—´ï¼š</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="startDay" id="startDay"placeholder="2016-11-22" onClick="return Calendar('startDay');" class="text_time" />         
+          <input type="text" class="input w50" id="startDay" name="startDay" onClick="return Calendar('startDay');" class="text_time"  />         
           <div class="tips"></div>
         </div>
       </div> 
        <div class="form-group">
         <div class="label">
-          <label>½áÊøÊ±¼ä£º</label>
+          <label>ç»“æŸæ—¶é—´ï¼š</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="entitle" value="" />         
+          <input type="text" class="input w50" id="endDay" name="endDay" onClick="return Calendar('endDay');" class="text_time"  />         
           <div class="tips"></div>
         </div>
       </div>       
       <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©Ê±¼ä£º</label>
+          <label>ç”¨è¯æ—¶é—´ï¼š</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="s_title" value="" />         
+          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©ÄÚÈİ£º</label>
+          <label>ç”¨è¯å†…å®¹ï¼š</label>
         </div>
         <div class="field">
-          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+          <textarea type="text" class="input"  name="content1" style="height:100px;" ></textarea>        
         </div>
      </div>
      <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©Ê±¼ä£º</label>
+          <label>ç”¨è¯æ—¶é—´ï¼š</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="s_keywords" value=""/>         
+          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©ÄÚÈİ£º</label>
+          <label>ç”¨è¯å†…å®¹ï¼š</label>
         </div>
         <div class="field">
-          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+          <textarea type="text" class="input"  name="content2" style="height:100px;" ></textarea>        
         </div>
      </div>
      <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©Ê±¼ä£º</label>
+          <label>ç”¨è¯æ—¶é—´ï¼š</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="s_keywords" value=""/>         
+          <input type="text" class="input" class="time1" name="time1" placeholder="20:08"/>         
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>ÓÃÒ©ÄÚÈİ£º</label>
+          <label>ç”¨è¯å†…å®¹ï¼š</label>
         </div>
         <div class="field">
-          <textarea type="text" class="input" name="s_desc" style="height:100px;" ></textarea>        
+          <textarea type="text" class="input"  name="content3" style="height:100px;" ></textarea>        
         </div>
      </div>
      <div class="form-group">
@@ -96,7 +100,7 @@
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit"> Ìá½»</button>
+          <button class="button bg-main icon-check-square-o" id="saveRemind"> æäº¤</button>
         </div>
       </div>
     </form>
@@ -106,11 +110,47 @@
    <script type="text/javascript" src="assets/js/doctor/time.js"></script>
    <script type="text/javascript" src="assets/js/doctor/data.js"></script>
 <script>
-function del(id){
-	if(confirm("ÄúÈ·¶¨ÒªÉ¾³ıÂğ?")){
-		
-	}
-}
+$(document).ready(function(){
+   $("#saveRemid").click(function(){
+	   
+	   alert("kdjhfkhd");
+		/* var userid = $.cookie("userId");
+
+	    
+	   var startDay = document.remind.startDay.value;
+	   
+	   var endDay = document.remind.endDay.value;
+	   
+	   var time1 = document.remind.time.value;
+	   
+	   var content1 = document.remind.content1.value;
+	   
+	   var time2 = document.remind.time2.value;
+	   
+	   var content2 = document.remind.content2.value;
+	   
+	   var time3 = document.remind.time3.value;
+	   
+	   var content3 = document.remind.content3.value;
+	   
+	   if(id){
+		 $.ajax({
+			 url:'http://localhost:8080/Test/AddRemind,
+		     type:'POST',
+		     dataType:'JSON',
+			 data: $(".form-x").serializeArray(),
+			 success:function(data){
+			 	 if(data=="0"){
+			 		 alert("æˆåŠŸ");
+			 	 }
+			 },
+		 });
+		 return false;
+		} 
+   });
+});
+
 </script>
 </body>
+<script src="assets/js/jquery.cookie.js"></script>
 </html>

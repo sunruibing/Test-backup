@@ -4,7 +4,7 @@ function login(){
 	var password = $.trim($("#password").val());
 		if(phone && password){
 			$.ajax({
-				url : 'http://localhost:8080/Test/login',
+				url : 'http://localhost:8080/Test-backup/login',
 				data : {'phone': phone,'password': password},
 				dataType : 'json',
 				type:'POST',

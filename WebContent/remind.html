@@ -4,6 +4,8 @@
 	<script src="https://cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
 	<script src='assets/js/doctor/jmessage-sdk-web.min.js'></script>
 	<script src="assets/js/doctor/jquery.cookies.2.2.0.js"></script>
+	<script src="assets/js/jquery.cookie.js"></script>
+	
 	
 	<!--自定义css-->
 	<link rel="stylesheet"  rel="stylesheet" href="assets/css/doctor/core.css" />
@@ -38,49 +40,39 @@
 				
 			</tbody>
 		</table>
-		<div id="remind">
-		<!--remind开始-->
-		<form name="reg_testdate" class="sum" >
-
-			<div class="sum_divstyle">
-				<span>开始时间:</span> 
-				<input type="text" name="startDay" id="startDay"placeholder="2016-11-22" onClick="return Calendar('startDay');" class="text_time" />
-			</div>
-			<div class="sum_divstyle">
-				<span>结束时间:</span> <input name="endDay" type="text" id="endDay"placeholder="2016-11-22" onClick="return Calendar('endDay');"class="text_time" />
-			</div>
-			<div class="sum_divstyle">
-				<span>用药时间:</span> <input type="text" class="time1" name="time1" placeholder="20:08" />
-			</div>
-			<div class="sum_divstyle">
-				<span class="yongyaotitle">用药编辑:</span>
-				<textarea class="yongyaotext" name="content1"></textarea>
-			</div>
-			<div class="sum_divstyle">
-				<span>用药时间:</span> 
-				<input type="text" class="time2" name="time2"placeholder="02:08" />
-			</div>
-			<div class="sum_divstyle">
-				<span class="yongyaotitle">用药编辑:</span>
-				<textarea class="yongyaotext" name="content2"></textarea>
-			</div>
-			<div class="sum_divstyle">
-				<span>用药时间:</span> 
-				<input type="text" class="time3" name="time3"placeholder="20:08" />
-			</div>
-			<div class="sum_divstyle">
-				<span class="yongyaotitle">用药编辑:</span>
-				<textarea class="yongyaotext" name="content3"></textarea>
-			</div>
-			<div class="sumtijiao">
-				<button type="submit" class="sumbaocun">保存</button>
-				<button type="button" class="sumquxiao">取消</button>
-			</div>
-
-		</form>
-	</div>
-	 <script type="text/javascript" src="assets/js/doctor/time.js"></script>
-	   <script type="text/javascript" src="assets/js/doctor/data.js"></script>
-	</body>
+		<script>
+$(document).ready(function(){
+	//获取挂号列表
+	$.ajax({
+		url: 'http://localhost:8080/Test-backup/FindReminUser',  
+        type: 'post',  
+        dataType: 'json',
+        success:function(data){
+   	  	$.each(data, function(commentIndex, comment){
+   		  $("#remindTbody").html($("#remindTbody").html()+ "<tr id='theader'>"+
+   		  			"<td>"+comment['id']+"</td>"+
+   		  			"<td >"+comment['name']+"</td>"+
+   		  			"<td >"+comment['gender']+"</td>"+
+   		  			"<td >"+comment['phone']+"</td>"+
+   		  			"<td >"+comment['order_code']+"</td>"+
+   		  			"<td >"+comment['reservation_date']+"</td>"+
+   		  			"<td>" + '<div class="button-group">' +
+					'<a class="button border-main edit" val=' + comment['id'] + ' href="#"><span class="icon-edit"></span>用药提醒</a>' +
+					'</div>' +
+   					"</td>"+
+   					"</tr>");
+     		
+				});
+   	  		$("#remindTbody").find(".edit").on("click", function() {
+			var id = $(this).attr("val");
+			alert(id);
+		    $.cookie("userId",id);
+			window.location.href = "addRemind.html";
+			});
+        },
+});
+});
+</script>
+</body>
 </html>
 
