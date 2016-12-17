@@ -32,8 +32,8 @@ function login() {
 	    console.log("login success:" + JSON.stringify(data));
 
 	    if("success" == data.message){
-	    	$.cookies.set("phone", phone);
-	    	$.cookies.set("password", password);
+	    	$.cookie("phone", phone);
+	    	$.cookie("password", password);
 	    	location.href = "index.html";
 	    }else{
 	    	alert("登录失败");
@@ -44,8 +44,8 @@ function login() {
 /*保持登录*/
 function logged(){
 	
-	var phone = $.cookies.get("phone");
-	var password = $.cookies.get("password");
+	var phone = $.cookie("phone");
+	var password = $.cookie("password");
 	
 	JIM.login(phone, password, auth_platform, function(data) {
 	    console.log("login success:" + JSON.stringify(data));

@@ -96,7 +96,7 @@
           <label>用药内容：</label>
         </div>
         <div class="field">
-          <textarea type="text" class="input"  name="content3" style="height:100px;" ></textarea>        
+          <textarea  class="input"  name="content3" style="height:100px;" ></textarea>        
         </div>
      </div>
      <div class="form-group">
@@ -113,46 +113,43 @@
 </body>
 <script>
 $(document).ready(function(){
-	
-	
    $("#saveRemid").click(function(){
-	   
 	   var userId = $.cookie("userId");
-	   
-	   alert(userId);
-	   
-	   var startDay = document.remind.startDay.value;
-	   
-	   var endDay = document.remind.endDay.value;
-	   
-	   var time1 = document.remind.time.value;
-	   
-	   var content1 = document.remind.content1.value;
-	   
-	   var time2 = document.remind.time2.value;
-	   
-	   var content2 = document.remind.content2.value;
-	   
-	   var time3 = document.remind.time3.value;
-	   
-	   var content3 = document.remind.content3.value;
-	   
-	   if(userId){
-		 $.ajax({
-			 url:'http://localhost:8080/Test/AddRemind',
-		     type:'POST',
-		     dataType:'JSON',
-			 data:{"userId":userId},
-			 success:function(data){
-			 	 if(data=="0"){
-			 		 alert("成功");
-			 	 }
-			 },
-		 });
-		 return false;
-		} 
+          add(userId);	   
    });
 });
+//删除文章
+function add(userId) {
+	
+   var startDay = document.remind.startDay.value;
+   
+   var endDay = document.remind.endDay.value;
+   
+   var time1 = document.remind.time.value;
+   
+   var content1 = document.remind.content1.value;
+   
+   var time2 = document.remind.time2.value;
+   
+   var content2 = document.remind.content2.value;
+   
+   var time3 = document.remind.time3.value;
+   
+   var content3 = document.remind.content3.value;
+	
+	$.ajax({
+	 url:'http://localhost:8080/Test/AddRemind',
+     type:'POST',
+     dataType:'JSON',
+	 data:{"userId":userId},
+	 success: function() {
+		alert("删除成功");
+		},
+	  error: function() {
+		alert("服务器错误，请稍后重试！");
+		}
+	});    
+}
 </script>
 </body>
 <script src="assets/js/jquery.cookie.js"></script>
